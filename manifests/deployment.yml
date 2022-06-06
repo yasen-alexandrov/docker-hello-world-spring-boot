@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "examplek8scluster36064ec-e960"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "examplek8scluster36064ec-e960"
+  template:
+    metadata:
+      labels:
+        app: "examplek8scluster36064ec-e960"
+    spec:
+      containers:
+        - name: "examplek8scluster36064ec-e960"
+          image: "examplek8scluster36064ecregistry.azurecr.io/examplek8scluster36064ec"
+          ports:
+          - containerPort: 8080
